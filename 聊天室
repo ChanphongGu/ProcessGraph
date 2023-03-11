@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-03-11T09:38:22.102Z" agent="5.0 (Windows)" etag="B_CTeF3zmUNX_Zif2EOB" version="21.0.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-11T09:50:36.289Z" agent="5.0 (Windows)" etag="MjjZEkqFHrMoYvEEBFHt" version="21.0.2" type="github">
   <diagram name="第 1 页" id="_O94YOc39soHUi7S3ZHs">
-    <mxGraphModel dx="472" dy="753" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="478" dy="764" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -85,16 +85,16 @@
           <mxGeometry y="188" width="190" height="92" as="geometry" />
         </mxCell>
         <mxCell id="oo5lzY1Ge5hRAhggwPXe-31" value="HttpConnection" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fillStyle=solid;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="23" y="1041" width="371" height="328" as="geometry" />
+          <mxGeometry x="23" y="1041" width="371" height="686" as="geometry" />
         </mxCell>
-        <mxCell id="oo5lzY1Ge5hRAhggwPXe-32" value="&lt;div&gt;+ m_epoll_fd: static int&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ m_user_num: static int&lt;br&gt;&lt;/div&gt;&lt;div&gt;- m_sock_fd: int&lt;/div&gt;&lt;div&gt;- m_addr: sockaddr_in&lt;/div&gt;&lt;div&gt;&lt;div&gt;+ m_name_socks: static unordered_map&amp;lt;string, int&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ m_groups: static &amp;lt;int, set&amp;lt;int&amp;gt;&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- m_source_dests: unordered_map&amp;lt;string, string&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fillStyle=solid;dashed=1;" vertex="1" parent="oo5lzY1Ge5hRAhggwPXe-31">
-          <mxGeometry y="26" width="371" height="174" as="geometry" />
+        <mxCell id="oo5lzY1Ge5hRAhggwPXe-32" value="&lt;div&gt;+ m_epoll_fd: static int&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ m_user_num: static int&lt;/div&gt;&lt;div&gt;+ conns_pool: static HttpConnection*&lt;/div&gt;&lt;div&gt;+ m_bloom_filter: static BloomFilter&lt;/div&gt;&lt;div&gt;+ FILENAME: static const int&lt;/div&gt;&lt;div&gt;+ READ_BUFFER_SIZE: static const int&lt;/div&gt;&lt;div&gt;+ WRITE_BUFFER_SIZE: static const int&lt;/div&gt;&lt;div&gt;+ m_name_socks: static unordered_map&amp;lt;string, int&amp;gt;&lt;/div&gt;&lt;div&gt;+ m_sock_names: unordered_map&amp;lt;int, string&amp;gt;&lt;/div&gt;&lt;div&gt;+ m_group: unordered_map&amp;lt;int, int&amp;gt;&lt;/div&gt;&lt;div&gt;+ m_sour_dest: unordered_map&amp;lt;string, string&amp;gt;&lt;/div&gt;&lt;div&gt;+ m_name_sock_mutex: static Locker&lt;/div&gt;&lt;div&gt;+ m_sock_name_mutex: static Locker&lt;/div&gt;&lt;div&gt;+ m_sour_dest_mutex: Locker&lt;/div&gt;&lt;div&gt;+ m_group_mutex: static Locker&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- m_sock_fd: int&lt;/div&gt;&lt;div&gt;- m_addr: sockaddr_in&lt;/div&gt;&lt;div&gt;&lt;div&gt;- m_sock_groups: set&amp;lt;int&amp;gt;&lt;/div&gt;&lt;div&gt;- m_read_buf: char*&lt;/div&gt;&lt;div&gt;- m_read_index: int&lt;/div&gt;&lt;div&gt;- m_write_buf: char*&lt;/div&gt;&lt;div&gt;- bytes_to_send: int&lt;/div&gt;&lt;div&gt;- bytes_have_send: int&lt;/div&gt;&lt;div&gt;- m_write_index: int&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fillStyle=solid;dashed=1;" vertex="1" parent="oo5lzY1Ge5hRAhggwPXe-31">
+          <mxGeometry y="26" width="371" height="374" as="geometry" />
         </mxCell>
         <mxCell id="oo5lzY1Ge5hRAhggwPXe-33" value="" style="line;strokeWidth=1;fillColor=#dae8fc;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#6c8ebf;fillStyle=solid;dashed=1;" vertex="1" parent="oo5lzY1Ge5hRAhggwPXe-31">
-          <mxGeometry y="200" width="371" height="8" as="geometry" />
+          <mxGeometry y="400" width="371" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="oo5lzY1Ge5hRAhggwPXe-34" value="&lt;div&gt;+ HttpConnection(): void&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ ~HttpConnection(): void&lt;/div&gt;&lt;div&gt;+ init(int, const sockaddr_in&amp;amp;): void&lt;/div&gt;&lt;div&gt;+ process(): void&lt;/div&gt;&lt;div&gt;+ closeConn(): void&lt;/div&gt;" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fillStyle=solid;dashed=1;" vertex="1" parent="oo5lzY1Ge5hRAhggwPXe-31">
-          <mxGeometry y="208" width="371" height="120" as="geometry" />
+        <mxCell id="oo5lzY1Ge5hRAhggwPXe-34" value="&lt;div&gt;+ HttpConnection(): void&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ ~HttpConnection(): void&lt;/div&gt;&lt;div&gt;+ init(int, const sockaddr_in&amp;amp;): void&lt;/div&gt;&lt;div&gt;+ initConnPool(int): static HttpConnection*&lt;/div&gt;&lt;div&gt;+ initState(): void&lt;/div&gt;&lt;div&gt;+ process(): void&lt;/div&gt;&lt;div&gt;+ closeConn(): void&lt;/div&gt;&lt;div&gt;+ readData(): bool&lt;/div&gt;&lt;div&gt;+ writeData(): bool&lt;/div&gt;&lt;div&gt;+ setWriteBuffer(string): bool&lt;/div&gt;&lt;div&gt;+ makeReply(QUERY_CODE): bool&lt;/div&gt;&lt;div&gt;+ checkSession(): string&lt;/div&gt;&lt;div&gt;+ login(): bool&lt;/div&gt;&lt;div&gt;+ registerUser(): bool&lt;/div&gt;&lt;div&gt;+ target(): bool&lt;/div&gt;&lt;div&gt;+ transMsg(): bool&lt;/div&gt;&lt;div&gt;+ group(): bool&lt;/div&gt;&lt;div&gt;+ tranGroupMsg(): bool&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fillStyle=solid;dashed=1;" vertex="1" parent="oo5lzY1Ge5hRAhggwPXe-31">
+          <mxGeometry y="408" width="371" height="278" as="geometry" />
         </mxCell>
         <mxCell id="oo5lzY1Ge5hRAhggwPXe-35" value="布隆过滤器实现" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
           <mxGeometry x="369" y="565" width="230" height="40" as="geometry" />
@@ -115,13 +115,15 @@
           <mxGeometry y="88" width="190" height="120" as="geometry" />
         </mxCell>
         <mxCell id="oo5lzY1Ge5hRAhggwPXe-44" value="mysql封装类" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
-          <mxGeometry x="19" y="1404" width="182" height="40" as="geometry" />
+          <mxGeometry x="26" y="1762" width="182" height="40" as="geometry" />
         </mxCell>
         <mxCell id="oo5lzY1Ge5hRAhggwPXe-45" value="redis封装类" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
-          <mxGeometry x="413" y="1407" width="182" height="40" as="geometry" />
+          <mxGeometry x="538" y="1688" width="182" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="oo5lzY1Ge5hRAhggwPXe-46" value="MysqlConnection" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fillStyle=solid;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="36" y="1514" width="238" height="205" as="geometry" />
+        <mxCell id="oo5lzY1Ge5hRAhggwPXe-46" value="MysqlConnection" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fillStyle=solid;dashed=1;" vertex="1" collapsed="1" parent="1">
+          <mxGeometry x="33" y="1828" width="132" height="26" as="geometry">
+            <mxRectangle x="28" y="1754" width="238" height="205" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="oo5lzY1Ge5hRAhggwPXe-47" value="&lt;div&gt;- m_conn: MYSQL*&lt;/div&gt;&lt;div&gt;- m_addr: mysql_addr&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fillStyle=solid;dashed=1;" vertex="1" parent="oo5lzY1Ge5hRAhggwPXe-46">
           <mxGeometry y="26" width="238" height="51" as="geometry" />
@@ -133,10 +135,12 @@
           <mxGeometry y="85" width="238" height="120" as="geometry" />
         </mxCell>
         <mxCell id="oo5lzY1Ge5hRAhggwPXe-51" value="工具类Util" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
-          <mxGeometry x="14" y="1785" width="182" height="40" as="geometry" />
+          <mxGeometry x="14" y="1993" width="182" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="oo5lzY1Ge5hRAhggwPXe-52" value="RedisConnection" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fillStyle=solid;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="399" y="1514" width="238" height="205" as="geometry" />
+        <mxCell id="oo5lzY1Ge5hRAhggwPXe-52" value="RedisConnection" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fillStyle=solid;dashed=1;" vertex="1" collapsed="1" parent="1">
+          <mxGeometry x="538" y="1747" width="131" height="26" as="geometry">
+            <mxRectangle x="538" y="1747" width="238" height="205" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="oo5lzY1Ge5hRAhggwPXe-53" value="&lt;div&gt;- m_conn: redisContext*&lt;/div&gt;&lt;div&gt;- m_addr: redis_addr&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fillStyle=solid;dashed=1;" vertex="1" parent="oo5lzY1Ge5hRAhggwPXe-52">
           <mxGeometry y="26" width="238" height="51" as="geometry" />
@@ -147,8 +151,10 @@
         <mxCell id="oo5lzY1Ge5hRAhggwPXe-55" value="&lt;div&gt;+ RedisConnection(): void&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ ~RedisConnection(): void&lt;/div&gt;&lt;div&gt;+ init(): void&lt;/div&gt;&lt;div&gt;+ connect(): bool&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ query(string): string&lt;/div&gt;&lt;div&gt;+ close(): void&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fillStyle=solid;dashed=1;" vertex="1" parent="oo5lzY1Ge5hRAhggwPXe-52">
           <mxGeometry y="85" width="238" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="oo5lzY1Ge5hRAhggwPXe-56" value="Locker" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fillStyle=solid;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="41" y="1887" width="226" height="180" as="geometry" />
+        <mxCell id="oo5lzY1Ge5hRAhggwPXe-56" value="Locker" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fillStyle=solid;dashed=1;" vertex="1" collapsed="1" parent="1">
+          <mxGeometry x="40" y="2066" width="75" height="26" as="geometry">
+            <mxRectangle x="40" y="2066" width="226" height="180" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="oo5lzY1Ge5hRAhggwPXe-57" value="" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fillStyle=solid;dashed=1;" vertex="1" parent="oo5lzY1Ge5hRAhggwPXe-56">
           <mxGeometry y="26" width="226" height="26" as="geometry" />
