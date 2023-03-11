@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-03-11T09:27:32.863Z" agent="5.0 (Windows)" etag="JwsH6ylm4AoMr2wupaIj" version="21.0.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-11T09:38:22.102Z" agent="5.0 (Windows)" etag="B_CTeF3zmUNX_Zif2EOB" version="21.0.2" type="github">
   <diagram name="第 1 页" id="_O94YOc39soHUi7S3ZHs">
-    <mxGraphModel dx="1434" dy="754" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="472" dy="753" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -121,16 +121,43 @@
           <mxGeometry x="413" y="1407" width="182" height="40" as="geometry" />
         </mxCell>
         <mxCell id="oo5lzY1Ge5hRAhggwPXe-46" value="MysqlConnection" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fillStyle=solid;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="36" y="1514" width="190" height="180" as="geometry" />
+          <mxGeometry x="36" y="1514" width="238" height="205" as="geometry" />
         </mxCell>
-        <mxCell id="oo5lzY1Ge5hRAhggwPXe-47" value="+ m_mutex: pthread_mutex_t" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fillStyle=solid;dashed=1;" vertex="1" parent="oo5lzY1Ge5hRAhggwPXe-46">
-          <mxGeometry y="26" width="190" height="26" as="geometry" />
+        <mxCell id="oo5lzY1Ge5hRAhggwPXe-47" value="&lt;div&gt;- m_conn: MYSQL*&lt;/div&gt;&lt;div&gt;- m_addr: mysql_addr&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fillStyle=solid;dashed=1;" vertex="1" parent="oo5lzY1Ge5hRAhggwPXe-46">
+          <mxGeometry y="26" width="238" height="51" as="geometry" />
         </mxCell>
         <mxCell id="oo5lzY1Ge5hRAhggwPXe-48" value="" style="line;strokeWidth=1;fillColor=#dae8fc;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#6c8ebf;fillStyle=solid;dashed=1;" vertex="1" parent="oo5lzY1Ge5hRAhggwPXe-46">
-          <mxGeometry y="52" width="190" height="8" as="geometry" />
+          <mxGeometry y="77" width="238" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="oo5lzY1Ge5hRAhggwPXe-49" value="&lt;div&gt;+ Locker(): void&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ ~Locker(): void&lt;/div&gt;&lt;div&gt;+ lock(): bool&lt;/div&gt;&lt;div&gt;+ unlock(): bool&lt;/div&gt;&lt;div&gt;+ get(): pthread_mutex_t*&lt;/div&gt;" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fillStyle=solid;dashed=1;" vertex="1" parent="oo5lzY1Ge5hRAhggwPXe-46">
-          <mxGeometry y="60" width="190" height="120" as="geometry" />
+        <mxCell id="oo5lzY1Ge5hRAhggwPXe-49" value="&lt;div&gt;+ MysqlConnection(): void&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ ~MysqlConnection(): void&lt;/div&gt;&lt;div&gt;+ init(): void&lt;/div&gt;&lt;div&gt;+ connect(mysql_addr*): void&lt;/div&gt;&lt;div&gt;+ query(string): vector&amp;lt;vector&amp;lt;string&amp;gt;&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ close(): void&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fillStyle=solid;dashed=1;" vertex="1" parent="oo5lzY1Ge5hRAhggwPXe-46">
+          <mxGeometry y="85" width="238" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="oo5lzY1Ge5hRAhggwPXe-51" value="工具类Util" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="14" y="1785" width="182" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oo5lzY1Ge5hRAhggwPXe-52" value="RedisConnection" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fillStyle=solid;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="399" y="1514" width="238" height="205" as="geometry" />
+        </mxCell>
+        <mxCell id="oo5lzY1Ge5hRAhggwPXe-53" value="&lt;div&gt;- m_conn: redisContext*&lt;/div&gt;&lt;div&gt;- m_addr: redis_addr&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fillStyle=solid;dashed=1;" vertex="1" parent="oo5lzY1Ge5hRAhggwPXe-52">
+          <mxGeometry y="26" width="238" height="51" as="geometry" />
+        </mxCell>
+        <mxCell id="oo5lzY1Ge5hRAhggwPXe-54" value="" style="line;strokeWidth=1;fillColor=#dae8fc;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#6c8ebf;fillStyle=solid;dashed=1;" vertex="1" parent="oo5lzY1Ge5hRAhggwPXe-52">
+          <mxGeometry y="77" width="238" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="oo5lzY1Ge5hRAhggwPXe-55" value="&lt;div&gt;+ RedisConnection(): void&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ ~RedisConnection(): void&lt;/div&gt;&lt;div&gt;+ init(): void&lt;/div&gt;&lt;div&gt;+ connect(): bool&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ query(string): string&lt;/div&gt;&lt;div&gt;+ close(): void&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fillStyle=solid;dashed=1;" vertex="1" parent="oo5lzY1Ge5hRAhggwPXe-52">
+          <mxGeometry y="85" width="238" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="oo5lzY1Ge5hRAhggwPXe-56" value="Locker" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fillStyle=solid;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="41" y="1887" width="226" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="oo5lzY1Ge5hRAhggwPXe-57" value="" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fillStyle=solid;dashed=1;" vertex="1" parent="oo5lzY1Ge5hRAhggwPXe-56">
+          <mxGeometry y="26" width="226" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="oo5lzY1Ge5hRAhggwPXe-58" value="" style="line;strokeWidth=1;fillColor=#dae8fc;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#6c8ebf;fillStyle=solid;dashed=1;" vertex="1" parent="oo5lzY1Ge5hRAhggwPXe-56">
+          <mxGeometry y="52" width="226" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="oo5lzY1Ge5hRAhggwPXe-59" value="&lt;div&gt;+ setNonBlock(int): static void&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ addFd(int, int, bool): static void&lt;/div&gt;&lt;div&gt;+ modifyFd(int, int, int): static void&lt;/div&gt;&lt;div&gt;+ removeFd(int, int): static void&lt;/div&gt;&lt;div&gt;+ addSig(int, void (*) (int)):static  void&lt;/div&gt;&lt;div&gt;+ makeSesId(): static void&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fillStyle=solid;dashed=1;" vertex="1" parent="oo5lzY1Ge5hRAhggwPXe-56">
+          <mxGeometry y="60" width="226" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
