@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-29T08:43:43.854Z" agent="5.0 (Windows)" etag="8RnZYSMVPudxZSPgEYvC" version="21.0.6" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-29T08:44:12.566Z" agent="5.0 (Windows)" etag="OqUQ3PLa_wH8lSQRios2" version="21.0.6" type="github">
   <diagram name="第 1 页" id="cvF_Rx3paH323SPsrNpo">
     <mxGraphModel dx="1434" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -37,9 +37,6 @@
         </mxCell>
         <mxCell id="M15iR69jWhmPZ-e0jam5-12" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="390" y="305" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="M15iR69jWhmPZ-e0jam5-14" value="丢弃" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;sketch=1;fontSize=16;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="340" y="350" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="M15iR69jWhmPZ-e0jam5-16" value="熔断模块" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="334" y="110" width="80" height="40" as="geometry" />
@@ -114,6 +111,9 @@
         </mxCell>
         <mxCell id="M15iR69jWhmPZ-e0jam5-38" value="限流模块" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="344" y="840" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="M15iR69jWhmPZ-e0jam5-39" value="根据业务需求处理" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;sketch=1;fontSize=16;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="334" y="350" width="90" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
