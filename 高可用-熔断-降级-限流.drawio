@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-29T08:41:10.443Z" agent="5.0 (Windows)" etag="EsIiANgfaiJFCrVsNqzQ" version="21.0.6" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-29T08:41:31.882Z" agent="5.0 (Windows)" etag="AqZTvb8ASrXsANzDIY8G" version="21.0.6" type="github">
   <diagram name="第 1 页" id="cvF_Rx3paH323SPsrNpo">
     <mxGraphModel dx="1434" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -40,6 +40,43 @@
         </mxCell>
         <mxCell id="M15iR69jWhmPZ-e0jam5-16" value="熔断模块" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="334" y="110" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="M15iR69jWhmPZ-e0jam5-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="M15iR69jWhmPZ-e0jam5-18" target="M15iR69jWhmPZ-e0jam5-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M15iR69jWhmPZ-e0jam5-18" value="服务A" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#dae8fc;sketch=1;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="70" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="M15iR69jWhmPZ-e0jam5-19" value="服务B" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#dae8fc;sketch=1;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="610" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="M15iR69jWhmPZ-e0jam5-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="M15iR69jWhmPZ-e0jam5-22" target="M15iR69jWhmPZ-e0jam5-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="670" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M15iR69jWhmPZ-e0jam5-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="M15iR69jWhmPZ-e0jam5-22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="M15iR69jWhmPZ-e0jam5-22" value="判断B是否可用" style="rhombus;whiteSpace=wrap;html=1;fillStyle=auto;rounded=0;sketch=1;curveFitting=1;jiggle=2;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="280" y="645" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="M15iR69jWhmPZ-e0jam5-23" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="520" y="640" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M15iR69jWhmPZ-e0jam5-24" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="695" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M15iR69jWhmPZ-e0jam5-25" value="丢弃" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;sketch=1;fontSize=16;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="350" y="740" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="M15iR69jWhmPZ-e0jam5-26" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#D5E8D4;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="260" y="545" width="260" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="M15iR69jWhmPZ-e0jam5-27" value="降级模块" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="344" y="500" width="80" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
